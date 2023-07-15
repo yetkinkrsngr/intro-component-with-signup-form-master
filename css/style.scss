@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  font-size: 16px;
+  font-weight: 400;
+}
+:root {
+  /* Primary */
+
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+
+  /* Accent */
+
+  --Blue: hsl(248, 32%, 49%);
+  /* Neutral */
+
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+h1,
+p {
+  color: #fff;
+}
+main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../images/bg-intro-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(0, 100%, 74%);
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 0 8rem;
+    text-align: left;
+    margin-left: 2rem;
+    h1 {
+      font-size: 48px;
+    }
+    p {
+      line-height: 2rem;
+    }
+  }
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    button {
+      margin-bottom: 1rem;
+      width: 35rem;
+      height: 3rem;
+      border-radius: 5px;
+      border: none;
+      background-color: hsla(248, 32%, 49%, 1);
+      color: hsla(0, 0%, 100%, 0.9);
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background-color: hsla(248, 32%, 49%, 0.8);
+        color: hsla(0, 0%, 100%, 1);
+      }
+      .btn-span {
+        font-weight: 600;
+      }
+    }
+    form {
+      position: relative;
+      height: 65vh;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      .form-group {
+        position: relative;
+        margin-bottom: 5px;
+        transition: 0.4s;
+        .icon-position {
+          position: absolute;
+          left: 90%;
+          top: 30%;
+        }
+        .label {
+          display: block;
+          margin-top: -25px;
+          text-align: end;
+          color: var(--Red);
+          font-size: 12px;
+        }
+        .hidden {
+          visibility: hidden;
+        }
+      }
+      input {
+        display: block;
+        width: 100%;
+        margin-bottom: 2rem;
+        height: 2rem;
+      }
+
+      ::placeholder {
+        font-weight: 600;
+      }
+      .input-txt {
+        padding: 20px;
+      }
+      .btn-submit {
+        margin-top: 30px;
+        height: 3rem;
+        background-color: var(--Green);
+        color: #fff;
+        font-weight: 500;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .btn-submit:hover {
+        opacity: 0.8;
+      }
+      .text-form {
+        color: var(--Grayish-Blue);
+        font-size: 12px;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        .text-form-span a {
+          color: var(--Red);
+          font-weight: 600;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  main {
+    flex-direction: column;
+    height: 150vh;
+
+    .left-side {
+      margin-left: 0;
+      font-size: 16px;
+      text-align: center;
+      width: 100%;
+      padding: 15px;
+      h1 {
+        font-size: 32px;
+        margin-top: -40px;
+      }
+      p {
+        margin-top: 20px;
+      }
+    }
+    .right-side {
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .right-side {
+      button {
+        width: 100%;
+      }
+      form {
+        height: 70vh;
+      }
+    }
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
